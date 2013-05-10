@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('habitsApp', [])
+angular.module('habitsApp', ['LocalStorageModule'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

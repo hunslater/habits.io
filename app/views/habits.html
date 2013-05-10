@@ -1,3 +1,7 @@
 <input placeholder="{{ placeholder }}" ng-model="name" />
 <button class="bad" ng-click="update(id, name, 'bad')">bad</button>
 <button class="good" ng-click="update(id, name, 'good')">good</button>
+
+<ul>
+  <li ng-repeat="habit in habits" class="{{ habit.sentiment }}"><a href="#/habit/{{ $index }}">{{ habit.name }}</a> <button ng-click="del($index, habit.name)">t</button></li>
+</ul>

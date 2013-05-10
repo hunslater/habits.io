@@ -5,3 +5,7 @@
 <ul>
   <li ng-repeat="habit in habits" class="{{ habit.sentiment }}"><a href="#/habit/{{ $index }}">{{ habit.name }}</a> <button ng-click="del($index, habit.name)">t</button></li>
 </ul>
+
+<div class="done {{ habits.length == 0 | className:'hide' }}">
+  <a href="#/dashboard">Done</a>
+</div>

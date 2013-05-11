@@ -5,20 +5,18 @@ angular.module('habitsApp')
     return {
       templateUrl: 'views/logHabit.html',
       restrict: 'E',
-      controller: ['$scope', '$rootScope', '$attrs', function (scope, root, attrs) {
+      controller: ['$scope', '$attrs', 'habits', function (scope, attrs, habits) {
 
         scope.logsInvisible = true;
         scope.habit = attrs.habit;
 
         scope.add = function (date) {
-          root.habit.log.add(scope.$index, date);
+          habits.addLog(scope.$index, date);
           scope.update();
-          //scope.logsInvisible = true;
         };
 
         scope.update = function (date, amount) {
-          root.habit.log.update(scope.$index, date, amount);
-          //scope.logsInvisible = true;
+          habits.updateLog(scope.$index, date, amount);
         };
 
       }],

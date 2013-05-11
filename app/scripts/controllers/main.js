@@ -1,14 +1,14 @@
 'use strict';
 
 angular.module('habitsApp')
-  .controller('MainCtrl', ['$scope', '$rootScope', '$location', function ($scope, $rootScope, $location) {
+  .controller('MainCtrl', ['$scope', '$location', 'habits', function ($scope, $location, habits) {
 
-    if (angular.isArray($rootScope.habits)) {
+    if (habits.hasHabits()) {
       $location.path('/dashboard');
     }
 
     $scope.start = function () {
-      $rootScope.habits = [];
+      habits.init();
       $location.path('/habit');
     };
 

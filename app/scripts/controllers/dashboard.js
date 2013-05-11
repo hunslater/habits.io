@@ -1,12 +1,10 @@
 'use strict';
 
 angular.module('habitsApp')
-  .controller('DashboardCtrl', ['$scope', '$rootScope', '$location', function ($scope, $rootScope, $location) {
+  .controller('DashboardCtrl', ['$scope', '$location', 'habits', function ($scope, $location, habits) {
 
-    if ($rootScope.habits.length === 0) {
+    if (habits.hasHabits()) {
       $location.path('/habit');
     }
-
-
 
   }]);

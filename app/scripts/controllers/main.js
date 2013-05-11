@@ -12,5 +12,4 @@ angular.module('habitsApp')
       $location.path('/habit');
     };
 
-
   }]);

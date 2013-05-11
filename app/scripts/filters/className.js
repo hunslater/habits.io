@@ -2,7 +2,7 @@
 
 angular.module('habitsApp')
   .filter('className', function () {
-    return function (input, className) {
-      return input ? className: ''
+    return function (bool, className) {
+      return bool ? className: '';
     };
   });

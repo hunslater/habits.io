@@ -1,0 +1,9 @@
+<a ng-click="showLogs()">{{ habit.name }}</a>
+
+<div class="day-viewer {{ logsInvisible | className:'hide' }}">
+  <ul>
+    <li ng-repeat="day in days">
+      <span>{{ day.pretty }}</span>
+    </li>
+  </ul>
+</div>

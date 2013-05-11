@@ -1,3 +1,5 @@
 <ul>
-  <li ng-repeat="habit in habits"><button>{{ habit.name }}</button></li>
+  <li ng-repeat="habit in habits">
+    <log-habit habit="{{ habit }}"></log-habit>
+  </li>
 </ul>

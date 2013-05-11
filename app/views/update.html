@@ -1,0 +1,11 @@
+
+<div class="update-inner">
+  <h2>Update</h2>
+  <p><strong>{{ $parent.habit.name }}</strong></p>
+  <p>{{ day.pretty }}</p>
+  <select ng-model="day.log">
+    <option ng-repeat="i in numbers">{{ i }}</option>
+  </select>
+
+  <button ng-click="close()">Update</button>
+</div>

@@ -5,19 +5,23 @@ angular.module('habitsApp')
     return {
       templateUrl: 'views/logHabit.html',
       restrict: 'E',
-      controller: ['$scope', '$attrs', 'habits', function (scope, attrs, habits) {
+      controller: ['$scope', '$attrs', 'habits', function ($scope, $attrs, habits) {
 
-        scope.logsInvisible = true;
-        scope.habit = attrs.habit;
+        $scope.logsInvisible = true;
+        $scope.habit = $attrs.habit;
 
-        scope.add = function (date) {
-          habits.addLog(scope.$index, date);
-          scope.update();
+        $scope.add = function (date) {
+          habits.addLog($scope.$index, date);
+          $scope.update();
         };
 
-        scope.update = function (date, amount) {
-          habits.updateLog(scope.$index, date, amount);
+        $scope.update = function (date, amount) {
+          habits.updateLog($scope.$index, date, amount);
         };
+
+        $scope.updateBox = function (day) {
+          day.show = true;
+        }
 
       }],
       link: function postLink(scope, element, attrs) {
@@ -83,10 +87,9 @@ angular.module('habitsApp')
 
         scope.showLogs = function () {
           scope.logsInvisible = !scope.logsInvisible;
-          generateDays(today, scope.days);
+          if (!scope.logsInvisible) { generateDays(today, scope.days); }
           scope.update();
         };
-
 
       }
     };

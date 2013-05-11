@@ -2,11 +2,12 @@
 
 <div class="day-viewer {{ logsInvisible | className:'hide' }}">
   <ul>
-    <li ng-repeat="day in days" data-date="{{ day.key }}">
-      <a ng-click="add(day.date)">
+    <li ng-repeat="day in days" data-date="{{ day.date.valueOf() }}" class="{{ day.show | className:'show-update' }}">
+      <a ng-click="add(day.date)" long-click="updateBox(day)">
         <span>{{ day.pretty }}</span>
         <span>{{ day.log }}</span>
       </a>
+      <update date="{{ day }}"></update>
     </li>
   </ul>
-</div> 
+</div>

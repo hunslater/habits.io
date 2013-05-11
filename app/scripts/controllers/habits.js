@@ -24,7 +24,7 @@ angular.module('habitsApp')
     $scope.placeholder = exampleHabit[1];
 
     $scope.update = function (id, name, sentiment) {
-      if (id === undefined) {
+      if (!id && id !== 0) {
         habits.addHabit(name, sentiment);
         $scope.id = null;
         $scope.name = '';

@@ -2,7 +2,7 @@
 
 <div class="day-viewer {{ logsInvisible | className:'hide' }}">
   <ul>
-    <li ng-repeat="day in days" data-date={{ day.key }}"">
+    <li ng-repeat="day in days" data-date="{{ day.key }}">
       <a ng-click="add(day.date)">
         <span>{{ day.pretty }}</span>
         <span>{{ day.log }}</span>

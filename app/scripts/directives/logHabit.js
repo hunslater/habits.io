@@ -5,18 +5,19 @@ angular.module('habitsApp')
     return {
       templateUrl: 'views/logHabit.html',
       restrict: 'E',
-      controller: ['$scope', '$attrs', function (scope, attrs) {
+      controller: ['$scope', '$rootScope', '$attrs', function (scope, root, attrs) {
 
         scope.logsInvisible = true;
         scope.habit = attrs.habit;
 
         scope.add = function (date) {
-          scope.$root.habit.log.add(scope.$index, date);
+          root.habit.log.add(scope.$index, date);
+          scope.update();
           //scope.logsInvisible = true;
         };
 
         scope.update = function (date, amount) {
-          scope.$root.habit.log.update(scope.$index, date, amount);
+          root.habit.log.update(scope.$index, date, amount);
           //scope.logsInvisible = true;
         };
 
@@ -57,25 +58,35 @@ angular.module('habitsApp')
           };
         }
 
-        function generateDays (today, populate, checkAgainst) {
+        function generateDays (today, populate) {
           if (!angular.isDate(today)) { return; }
-          console.log(checkAgainst)
           for (var i = -7; i < 8; i++) {
             var date = new Date();
             date.setDate(today.getDate() + i);
             var key = dateKey(date);
             populate[key] = makeDay(date);
+          }
+        }
+
+        function updateLogs (days, checkAgainst) {
+          for (var key in days) {
+            var day = days[key];
+            var date = day.date;
             var logs = checkAgainst[date.valueOf()];
             if (logs !== undefined) {
-              console.log(populate[key])
-              populate[key].log = logs;
+              days[key].log = logs;
             }
           }
         }
 
+        scope.update = function () {
+          updateLogs(scope.days, scope.habit.logs);
+        };
+
         scope.showLogs = function () {
           scope.logsInvisible = !scope.logsInvisible;
-          generateDays(today, scope.days, scope.habit.logs);
+          generateDays(today, scope.days);
+          scope.update();
         };
 
 

@@ -33,8 +33,8 @@ angular.module('habitsApp', ['LocalStorageModule'])
       $location.path('/');
     }
 
-    var habits = $rootScope.habits = JSON.parse(habitsStr);
-    var logs = $rootScope.logs = JSON.parse(store.get('logs'));
+    $rootScope.habits = JSON.parse(habitsStr);
+    $rootScope.logs = JSON.parse(store.get('logs'));
 
 
     function save () {
@@ -49,7 +49,7 @@ angular.module('habitsApp', ['LocalStorageModule'])
     $rootScope.habit = {
 
       add: function (name, sentiment) {
-        if (!goodBadRe.test(sentiment)) return;
+        if (!goodBadRe.test(sentiment)) { return; }
         $rootScope.habits.push({
           name: name,
           sentiment: sentiment
@@ -58,13 +58,13 @@ angular.module('habitsApp', ['LocalStorageModule'])
       },
 
       del: function (id) {
-        if ((id < 0) || (id > $rootScope.habits.length - 1)) return;
+        if ((id < 0) || (id > $rootScope.habits.length - 1)) { return; }
         $rootScope.habits.splice(id, 1);
         save();
       },
 
       edit: function (id, name, sentiment) {
-        if ((id < 0) || (id > $rootScope.habits.length - 1)) return;
+        if ((id < 0) || (id > $rootScope.habits.length - 1)) { return; }
         $rootScope.habits[id] = {
           name: name,
           sentiment: sentiment

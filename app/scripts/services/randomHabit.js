@@ -23,7 +23,7 @@ angular.module('habitsApp')
     };
 
     function rand(array) {
-      if (!angular.isArray(array)) return;
+      if (!angular.isArray(array)) { return; }
       return array[Math.floor(Math.random() * array.length)];
     }
 

@@ -9,7 +9,6 @@ angular.module('habitsApp')
 
     $scope.start = function () {
       $rootScope.habits = [];
-      $rootScope.logs = {};
       $location.path('/habit');
     };
 

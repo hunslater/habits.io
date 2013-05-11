@@ -34,12 +34,9 @@ angular.module('habitsApp', ['LocalStorageModule'])
     }
 
     $rootScope.habits = JSON.parse(habitsStr);
-    $rootScope.logs = JSON.parse(store.get('logs'));
-
 
     function save () {
       store.add('habits', JSON.stringify($rootScope.habits));
-      store.add('logs', JSON.stringify($rootScope.logs));
     }
 
     $rootScope.updateStore = save;
@@ -52,7 +49,8 @@ angular.module('habitsApp', ['LocalStorageModule'])
         if (!goodBadRe.test(sentiment)) { return; }
         $rootScope.habits.push({
           name: name,
-          sentiment: sentiment
+          sentiment: sentiment,
+          logs: {}
         });
         save();
       },
@@ -65,10 +63,8 @@ angular.module('habitsApp', ['LocalStorageModule'])
 
       edit: function (id, name, sentiment) {
         if ((id < 0) || (id > $rootScope.habits.length - 1)) { return; }
-        $rootScope.habits[id] = {
-          name: name,
-          sentiment: sentiment
-        };
+        $rootScope.habits[id].name = name;
+        $rootScope.habits[id].sentiment = sentiment;
         save();
       }
 

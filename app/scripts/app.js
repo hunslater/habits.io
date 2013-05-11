@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('habitsApp', ['LocalStorageModule'])
+angular.module('habitsApp', [])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -26,17 +26,15 @@ angular.module('habitsApp', ['LocalStorageModule'])
       .otherwise({
         redirectTo: '/'
       });
-  }).run(['$rootScope', 'localStorageService', '$location', function ($rootScope, store, $location) {
+  }).run(['$rootScope', 'storage', '$location', function ($rootScope, store, $location) {
 
-    var habitsStr = store.get('habits');
-    if (!habitsStr) {
+    $rootScope.habits = store.get('habits');
+    if (!$rootScope.habits) {
       $location.path('/');
     }
 
-    $rootScope.habits = JSON.parse(habitsStr);
-
     function save () {
-      store.add('habits', JSON.stringify($rootScope.habits));
+      store.add('habits', $rootScope.habits);
     }
 
     $rootScope.updateStore = save;

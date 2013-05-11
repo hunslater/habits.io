@@ -41,6 +41,10 @@ angular.module('habitsApp', ['LocalStorageModule'])
 
     $rootScope.updateStore = save;
 
+    function checkId (id) {
+      return !angular.isNumber(id) || (id < 0) || (id > $rootScope.habits.length - 1);
+    }
+
     var goodBadRe = /^good$|^bad$/;
 
     $rootScope.habit = {
@@ -56,16 +60,40 @@ angular.module('habitsApp', ['LocalStorageModule'])
       },
 
       del: function (id) {
-        if ((id < 0) || (id > $rootScope.habits.length - 1)) { return; }
+        if (checkId(id)) { return; }
         $rootScope.habits.splice(id, 1);
         save();
       },
 
       edit: function (id, name, sentiment) {
-        if ((id < 0) || (id > $rootScope.habits.length - 1)) { return; }
+        if (checkId(id)) { return; }
+        if (!goodBadRe.test(sentiment)) { return; }
         $rootScope.habits[id].name = name;
         $rootScope.habits[id].sentiment = sentiment;
         save();
+      },
+
+      log: {
+
+        add: function (id, date) {
+          if (checkId(id)) { return; }
+          if (!angular.isNumber(id) || (id < 0) || (id > $rootScope.habits.length - 1)) { return; }
+          if (!angular.isDate(date)) { return; }
+          var key = date.valueOf();
+          var current = $rootScope.habits[id].logs[key];
+          $rootScope.habits[id].logs[key] = angular.isNumber(current) ? current + 1: 1;
+          save();
+        },
+
+        update: function (id, date, amount) {
+          if (checkId(id)) { return; }
+          if (!angular.isDate(date)) { return; }
+          if (!angular.isNumber(amount) || (amount < 0)) { return; }
+          var key = date.valueOf() + '';
+          $rootScope.habits[id].logs[key] = amount;
+          save();
+        }
+
       }
 
     };

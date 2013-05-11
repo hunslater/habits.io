@@ -5,10 +5,24 @@ angular.module('habitsApp')
     return {
       templateUrl: 'views/logHabit.html',
       restrict: 'E',
+      controller: ['$scope', '$attrs', function (scope, attrs) {
+
+        scope.logsInvisible = true;
+        scope.habit = attrs.habit;
+
+        scope.add = function (date) {
+          scope.$root.habit.log.add(scope.$index, date);
+          //scope.logsInvisible = true;
+        };
+
+        scope.update = function (date, amount) {
+          scope.$root.habit.log.update(scope.$index, date, amount);
+          //scope.logsInvisible = true;
+        };
+
+      }],
       link: function postLink(scope, element, attrs) {
 
-        scope.habit = attrs.habit;
-        scope.logsInvisible = true;
         scope.days = {};
         var today = new Date();
 
@@ -37,25 +51,33 @@ angular.module('habitsApp')
           date.setMilliseconds(0);
           return {
             date: date,
+            key: dateKey(date),
             pretty: fmtDate(date),
             log: 0
           };
         }
 
-        function generateDays (today, populate) {
+        function generateDays (today, populate, checkAgainst) {
           if (!angular.isDate(today)) { return; }
+          console.log(checkAgainst)
           for (var i = -7; i < 8; i++) {
             var date = new Date();
             date.setDate(today.getDate() + i);
-            populate[dateKey(date)] = makeDay(date);
+            var key = dateKey(date);
+            populate[key] = makeDay(date);
+            var logs = checkAgainst[date.valueOf()];
+            if (logs !== undefined) {
+              console.log(populate[key])
+              populate[key].log = logs;
+            }
           }
-          console.log(populate);
         }
 
         scope.showLogs = function () {
           scope.logsInvisible = !scope.logsInvisible;
-          generateDays(today, scope.days);
+          generateDays(today, scope.days, scope.habit.logs);
         };
+
 
       }
     };

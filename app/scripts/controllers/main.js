@@ -3,7 +3,7 @@
 angular.module('habitsApp')
   .controller('MainCtrl', ['$scope', '$location', 'habits', function ($scope, $location, habits) {
 
-    if (habits.hasHabits()) {
+    if (habits.exists()) {
       $location.path('/dashboard');
     }
 

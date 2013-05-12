@@ -5,9 +5,18 @@ describe('Directive: chart', function () {
 
   var element;
 
-  it('should make hidden element visible', inject(function ($rootScope, $compile) {
+  beforeEach(inject(function inject($rootScope) {
+    $rootScope.habits = [];
+  }));
+
+  it('should make a working canvas element', inject(function ($rootScope, $compile) {
     element = angular.element('<chart></chart>');
     element = $compile(element)($rootScope);
-    expect(element.text()).toBe('this is the chart directive');
+    var ctx = element[0].getContext('2d');
+    expect(element[0].nodeName).toBe('CANVAS');
+    expect(angular.isFunction(element[0].getContext)).toBe(true);
+    expect(angular.isObject(ctx)).toBe(true);
+    expect(ctx.canvas).toBe(element[0]);
   }));
+
 });

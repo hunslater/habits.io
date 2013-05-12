@@ -14,7 +14,8 @@ update {
 }
 
 .show-update update {
-  display: block;}
+  display: block;
+}
 
 .update-cover {
   display: block;
@@ -32,5 +33,5 @@ update {
   left: 40px;
   right: 40px;
   background: #fff;
-  padding: 40px;dd
+  padding: 40px;
 }

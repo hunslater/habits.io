@@ -19,7 +19,7 @@ angular.module('habitsApp')
         var timer = 0;
         var fired = false;
 
-        element.bind('mousedown', function (e) {
+        element.bind('touchstart', function (e) {
           if (timer !== 0) { clearTimeout(timer); }
           target = e.target;
           timer = setTimeout(function () {
@@ -28,7 +28,7 @@ angular.module('habitsApp')
           }, wait);
         });
 
-        element.bind('mouseup', function (e) {
+        element.bind('touchend', function (e) {
           clearTimeout(timer);
           if (e.target !== target) { return; }
           if (fired) {

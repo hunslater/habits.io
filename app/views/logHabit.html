@@ -5,7 +5,8 @@
     <ul class="day-list cf">
       <li ng-repeat="day in days" class="{{ day.show | className:'show-update' }} {{ day.today | className:'day-today' }}">
         <a short-click="addLog(day)" long-click="showUpdate(day)">
-          <span class="day-day">{{ day.pretty }}</span>
+          <span class="day-day">{{ day.prettyDay }}</span>
+          <span class="day-date">{{ day.prettyDate }}</span>
           <span class="day-log">{{ day.log }}</span>
         </a>
         <update date="{{ day }}"></update>

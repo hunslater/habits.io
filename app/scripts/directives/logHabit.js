@@ -41,11 +41,17 @@ angular.module('habitsApp')
           return date.getFullYear() + '-' + pad(date.getMonth() + 1) + '-' + pad(date.getDate());
         }
 
+        var dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
         var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
         function fmtDate (date) {
           if (!angular.isDate(date)) { return; }
           return date.getDate() + ' ' + monthNames[date.getMonth()].substr(0, 3);
+        }
+
+        function fmtDay (date) {
+          if (!angular.isDate(date)) { return; }
+          return dayNames[date.getDay()].substr(0, 3);
         }
 
         function makeDay (date) {
@@ -57,7 +63,8 @@ angular.module('habitsApp')
           return {
             date: date,
             key: dateKey(date),
-            pretty: fmtDate(date),
+            prettyDay: fmtDay(date),
+            prettyDate: fmtDate(date),
             log: 0
           };
         }

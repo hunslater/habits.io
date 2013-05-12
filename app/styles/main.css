@@ -149,15 +149,21 @@ ul {
   color: #657b83;
   background: #eee8d5;
   font-weight: normal;
-  font-size: 14px;
 }
 
 .day-list span {
   display: block;
 }
 
+.day-day {
+  font-size: 15px;
+}
+
+.day-date {
+  font-size: 11px;
+}
+
 .day-log {
-  padding-top: 20px;
   font-size: 11px;
   text-align: right;
 }
@@ -185,6 +191,7 @@ update {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 10000;
   background: rgba(0, 0, 0, .35);
 }
 
@@ -201,13 +208,20 @@ update {
   right: 0;
 }
 
+/* hack for specificity */
+.day-list .update-cover {
+  width: auto;
+  height: auto;
+  background: none;
+}
+
 .update-inner {
   position: absolute;
   top: 120px;
   bottom: 120px;
   left: 40px;
   right: 40px;
-  background: #fff;
+  background: #fdf6e3;
   padding: 40px;
 }
 

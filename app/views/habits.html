@@ -5,7 +5,7 @@
 </div>
 
 <ul class="habit-list">
-  <li ng-repeat="habit in habits" class="habit-li-{{ habit.sentiment }}"><a href="#/habit/{{ $index }}">{{ habit.name }}</a> <button class="btn btn-trash" ng-click="del($index, habit.name)">t</button></li>
+  <li ng-repeat="habit in habits" class="habit-li-{{ habit.sentiment }}"><a href="#/habit/{{ $index }}">{{ habit.name }}</a> <button class="btn btn-trash" ng-click="del($index, habit.name)"><i class="icon-trash"></i></button></li>
 </ul>
 
 <div class="habit-done done {{ habits.length == 0 | className:'hide' }}">

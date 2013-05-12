@@ -1,13 +1,15 @@
-<a ng-click="showLogs()">{{ habit.name }}</a>
+<li class="habit-li-{{ habit.sentiment }}">
+  <a ng-click="showLogs()">{{ habit.name }}</a>
 
-<div class="day-viewer {{ logsInvisible | className:'hide' }}">
-  <ul>
-    <li ng-repeat="day in days" data-date="{{ day.date.valueOf() }}" class="{{ day.show | className:'show-update' }}">
-      <a short-click="addLog(day)" long-click="showUpdate(day)">
-        <span>{{ day.pretty }}</span>
-        <span>{{ day.log }}</span>
-      </a>
-      <update date="{{ day }}"></update>
-    </li>
-  </ul>
-</div>
+  <div class="day-viewer {{ logsInvisible | className:'hide' }}">
+    <ul class="day-list cf">
+      <li ng-repeat="day in days" class="{{ day.show | className:'show-update' }} {{ day.today | className:'day-today' }}">
+        <a short-click="addLog(day)" long-click="showUpdate(day)">
+          <span class="day-day">{{ day.pretty }}</span>
+          <span class="day-log">{{ day.log }}</span>
+        </a>
+        <update date="{{ day }}"></update>
+      </li>
+    </ul>
+  </div>
+</li>

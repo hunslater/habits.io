@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border-radius: 0;
 }
 
 body {
@@ -88,33 +89,24 @@ ul {
 
 .habit-list li {
   position: relative;
-  padding: 0 20px;
 }
 
 .habit-list a {
   display: block;
-  padding: 8px 0;
-}
-
-.habit-li-good {
-  border: solid rgba(133, 153, 0, .7);
-  border-width: 2px 0;
-
+  padding: 10px 20px;
+  font-weight: bold;
 }
 
 .habit-li-good a {
+  background: rgba(133, 153, 0, .2);
   color: #859900;
 }
 
-.habit-li-bad {
-  border: solid rgba(220, 50, 47, .7);
-  border-width: 2px 0;
-
-}
-
 .habit-li-bad a {
+  background: rgba(220, 50, 47, .25);
   color: #dc322f;
 }
+
 
 .habit-done {
   position: fixed;
@@ -126,10 +118,53 @@ ul {
 }
 
 .btn-trash {
-  padding: 0;
   position: absolute;
+  font-size: 18px;
+  background: none;
   top: 0;
   right: 0;
+  color: #657b83;
+}
+
+.day-viewer {
+  height: 80px;
+  overflow: hidden;
+}
+
+.day-list {
+  /*14*80*/
+  width: 2000px;
+  border: 2px solid #fdf6e3;
+}
+
+.day-list li {
+  float: left;
+}
+
+.day-list a {
+  display: block;
+  width: 80px;
+  height: 76px;
+  padding: 10px;
+  border-right: 2px solid #fdf6e3;
+  color: #657b83;
+  background: #eee8d5;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.day-list span {
+  display: block;
+}
+
+.day-log {
+  padding-top: 20px;
+  font-size: 11px;
+  text-align: right;
+}
+
+.day-today {
+  background: #fff;
 }
 
 .cf {

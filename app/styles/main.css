@@ -132,8 +132,7 @@ ul {
 }
 
 .day-list {
-  /*14*80*/
-  width: 2000px;
+  width: 1280px; /* 16*80 */
   border: 2px solid #fdf6e3;
 }
 

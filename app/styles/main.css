@@ -1,4 +1,85 @@
-/* Will be compiled down to a single stylesheet with your sass files */
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px/20px "Helvetica Neue", Helvetica, sans-serif;
+  color: #93a1a1;
+  background: #fdf6e3;
+}
+
+input,
+button,
+textarea {
+  font: 16px/20px "Helvetica Neue", Helvetica, sans-serif;
+}
+
+h1 {
+  color: #b58900;
+  margin: 0 0 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* Modules */
+.welcome {
+  margin: 40px;
+  text-align: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin: 20px 0;
+  border: 0;
+  background: #93a1a1;
+  color: #fff;
+}
+
+.btn-good {
+  background: #859900;
+}
+
+.btn-bad {
+  background: #dc322f;
+}
+
+
+.habit-form {
+  padding: 20px;
+}
+
+.tinput {
+  background: #93a1a1;
+  color: #fff;
+  padding: 10px;
+  border: 0;
+}
+
+.tinput::-webkit-input-placeholder {
+  color: #eee8d5;
+}
+
+.habit-tinput {
+  display: block;
+  width: 100%;
+}
+
+.habit-form .btn {
+  width: 45%;
+  float: left;
+}
+
+.habit-form .btn-good {
+  float: right;
+}
+
+
 .hide {
   display: none;
 }

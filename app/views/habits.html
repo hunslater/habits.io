@@ -1,11 +1,13 @@
-<input placeholder="{{ placeholder }}" ng-model="name" />
-<button class="bad" ng-click="update(id, name, 'bad')">bad</button>
-<button class="good" ng-click="update(id, name, 'good')">good</button>
+<div class="habit-form">
+  <input class="tinput habit-tinput" placeholder="{{ placeholder }}" ng-model="name" />
+  <button class="btn btn-bad" ng-click="update(id, name, 'bad')">bad</button>
+  <button class="btn btn-good" ng-click="update(id, name, 'good')">good</button>
+</div>
 
 <ul>
   <li ng-repeat="habit in habits" class="{{ habit.sentiment }}"><a href="#/habit/{{ $index }}">{{ habit.name }}</a> <button ng-click="del($index, habit.name)">t</button></li>
 </ul>
 
-<div class="done {{ habits.length == 0 | className:'hide' }}">
+<div class="habit-done done {{ habits.length == 0 | className:'hide' }}">
   <a href="#/dashboard">Done</a>
 </div>

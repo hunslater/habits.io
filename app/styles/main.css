@@ -11,6 +11,10 @@ body {
   background: #fdf6e3;
 }
 
+a {
+  text-decoration: none;
+}
+
 input,
 button,
 textarea {
@@ -34,11 +38,12 @@ ul {
 }
 
 .btn {
+  display: inline-block;
   padding: 10px 20px;
-  margin: 20px 0;
   border: 0;
   background: #93a1a1;
   color: #fff;
+  text-decoration: none;
 }
 
 .btn-good {
@@ -51,6 +56,7 @@ ul {
 
 
 .habit-form {
+  width: 100%;
   padding: 20px;
 }
 
@@ -58,6 +64,7 @@ ul {
   background: #93a1a1;
   color: #fff;
   padding: 10px;
+  margin-bottom: 20px;
   border: 0;
 }
 
@@ -79,6 +86,59 @@ ul {
   float: right;
 }
 
+.habit-list li {
+  position: relative;
+  padding: 0 20px;
+}
+
+.habit-list a {
+  display: block;
+  padding: 8px 0;
+}
+
+.habit-li-good {
+  border: solid rgba(133, 153, 0, .7);
+  border-width: 2px 0;
+
+}
+
+.habit-li-good a {
+  color: #859900;
+}
+
+.habit-li-bad {
+  border: solid rgba(220, 50, 47, .7);
+  border-width: 2px 0;
+
+}
+
+.habit-li-bad a {
+  color: #dc322f;
+}
+
+.habit-done {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: rgba(253, 246, 227, .75);
+}
+
+.btn-trash {
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.cf {
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
 
 .hide {
   display: none;
@@ -116,3 +176,4 @@ update {
   background: #fff;
   padding: 40px;
 }
+

@@ -79,7 +79,11 @@ angular.module('habitsApp')
         save();
       },
 
-      checkId: checkId
+      checkId: checkId,
+
+      clearData: function () {
+        storage.clear();
+      }
 
     };
 

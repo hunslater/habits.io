@@ -16,6 +16,10 @@ app.factory('storage', ['localStorage', 'prefix', function (localStorage, prefix
 
     add: function (key, val) {
       localStorage.setItem(prefix + '.' + key, JSON.stringify(val));
+    },
+
+    clear: function () {
+      localStorage.clear();
     }
 
   };

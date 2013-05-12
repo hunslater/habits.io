@@ -10,8 +10,4 @@ angular.module('habitsApp')
       }
     };
 
-    $scope.exportData = function () {
-      
-    };
-
   }]);

@@ -9,7 +9,6 @@ angular.module('habitsApp')
       controller: ['$scope', 'habits', function ($scope, habits) {
 
         var out = habits.export();
-        console.log(out);
         var good = out.good;
         var bad = out.bad;
         var labels = out.labels;

@@ -7,7 +7,10 @@ angular.module('habitsApp')
       link: function postLink(scope, element, attrs) {
 
         function longClickRun () {
-          scope.$apply(attrs.longClick);
+          // for safari :(
+          setTimeout(function () {
+            scope.$apply(attrs.longClick);
+          }, 1);
         }
 
         function shortClickRun () {
@@ -21,7 +24,7 @@ angular.module('habitsApp')
 
         element.bind('touchstart', function (e) {
           if (timer !== 0) { clearTimeout(timer); }
-          target = e.target;
+          target = e.touches.item(0).target;
           timer = setTimeout(function () {
             fired = true;
             timer = 0;
@@ -30,7 +33,10 @@ angular.module('habitsApp')
 
         element.bind('touchend', function (e) {
           clearTimeout(timer);
-          if (e.target !== target) { return; }
+          var touch = e.changedTouches.item(0);
+          var x = touch.pageX;
+          var y = touch.pageY;
+          if (document.elementFromPoint(x, y) !== target) { return; }
           if (fired) {
             longClickRun();
           } else  {

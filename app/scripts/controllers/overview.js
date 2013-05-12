@@ -4,7 +4,7 @@ angular.module('habitsApp')
   .controller('OverviewCtrl', ['$scope', '$location', 'habits', function ($scope, $location, habits) {
 
     $scope.clearData = function () {
-      if (confirm('Are you sure you want to clear all saved data?')) {
+      if (window.confirm('Are you sure you want to clear all saved data?')) {
         habits.clearData();
         $location.path('/');
       }
@@ -21,6 +21,6 @@ angular.module('habitsApp')
 
     $scope.updateChart = function (number) {
       $scope.chartShowing = number;
-    }
+    };
 
   }]);

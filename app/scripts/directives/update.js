@@ -18,7 +18,7 @@ angular.module('habitsApp')
           $scope.day.show = false;
         };
       }],
-      link: function postLink(scope, element, attrs) {
+      link: function postLink(scope) {
         scope.numbers = [];
         for (var i = 0; i < 50; i++) {
           scope.numbers.push(i);

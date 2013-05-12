@@ -109,9 +109,20 @@ angular.module('habitsApp')
         var today = new Date();
         normalise(today);
 
+        function extractHabits (habit) {
+          var count = parseInt(habit.logs[dateStr], 10);
+          if (isNaN(count)) { return; }
+          if (habit.sentiment === 'good') {
+            goodCount += count;
+          }
+          if (habit.sentiment === 'bad') {
+            badCount += count;
+          }
+        }
+
         for (var i = 90; i >= 0; i--) {
 
-          var newDate = new Date;
+          var newDate = new Date();
           newDate.setDate(today.getDate() - i);
           normalise(newDate);
           var dateStr = newDate.valueOf();
@@ -120,16 +131,7 @@ angular.module('habitsApp')
           var badCount = 0;
           var labelStr = fmtDate(newDate);
 
-          $rootScope.habits.forEach(function (el, i) {
-            var count = parseInt(el.logs[dateStr], 10);
-            if (isNaN(count)) { return; }
-            if (el.sentiment === 'good') {
-              goodCount += count;
-            }
-            if (el.sentiment == 'bad') {
-              badCount += count;
-            }
-          });
+          $rootScope.habits.forEach(extractHabits);
 
           good.push(goodCount);
           bad.push(badCount);
@@ -142,7 +144,7 @@ angular.module('habitsApp')
           labels: labels,
           good: good,
           bad: bad
-        }
+        };
 
       }
 

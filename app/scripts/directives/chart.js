@@ -13,8 +13,8 @@ angular.module('habitsApp')
         var bad = out.bad;
         var labels = out.labels;
 
-        var red = "220, 50, 47";
-        var green = "133, 153, 0";
+        var red = '220, 50, 47';
+        var green = '133, 153, 0';
 
         function rgb (str) {
           return 'rgb(' + str + ')';
@@ -25,8 +25,8 @@ angular.module('habitsApp')
         }
 
         function lastFromArr (arr, num) {
-          if (!angular.isArray(arr)) { return }
-          if (!angular.isNumber(num)) { return }
+          if (!angular.isArray(arr)) { return; }
+          if (!angular.isNumber(num)) { return; }
           return arr.slice(arr.length - num, arr.length);
         }
 
@@ -46,13 +46,11 @@ angular.module('habitsApp')
                 data: lastFromArr(bad, amount)
               }
             ]
-          }
+          };
         };
 
       }],
       link: function postLink(scope, element, attrs) {
-
-        var period = parseInt(attrs.period, 10);
 
         var ctx = element[0].getContext('2d');
 

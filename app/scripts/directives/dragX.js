@@ -4,26 +4,22 @@ angular.module('habitsApp')
   .directive('dragX', function () {
     return {
       restrict: 'A',
-      controller: ['$rootScope', '$scope', function ($rootScope, $scope) {
-
-      }],
-      link: function postLink(scope, element, attrs) {
+      link: function postLink(scope, element) {
 
         var maxLeft = 0;
         var minLeft = -884; // 1204 - 320
         var start = -442;
-        scope.moveLeft = start;
 
         function changeLeft (amount) {
-          var now = scope.moveLeft;
+          var now = parseInt(element.css('left'), 10) || start;
           var total = now - amount;
           if (total > maxLeft) {
-            return scope.moveLeft = maxLeft;
+            return maxLeft;
           }
           if (total < minLeft) {
-            return scope.moveLeft = minLeft;
+            return minLeft;
           }
-          return scope.moveLeft = total;
+          return total;
         }
 
         var finger = 0;
@@ -38,7 +34,7 @@ angular.module('habitsApp')
           element.css('left',  changeLeft(finger - x) + 'px');
         }, true);
 
-        element.bind('touchend', function (e) {
+        element.bind('touchend', function () {
           finger = 0;
         }, true);
 

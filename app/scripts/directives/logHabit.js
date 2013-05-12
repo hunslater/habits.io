@@ -25,7 +25,7 @@ angular.module('habitsApp')
         };
 
       }],
-      link: function postLink(scope, element, attrs) {
+      link: function postLink(scope) {
 
         var generated = false;
         scope.days = {};

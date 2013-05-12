@@ -30,6 +30,12 @@ angular.module('habitsApp')
         var generated = false;
         scope.days = {};
         var today = new Date();
+        // normalise time
+        today.setHours(1);
+        today.setMinutes(0);
+        today.setSeconds(0);
+        today.setMilliseconds(0);
+
 
         function pad (num) {
           var str = '' + num;
@@ -65,7 +71,8 @@ angular.module('habitsApp')
             key: dateKey(date),
             prettyDay: fmtDay(date),
             prettyDate: fmtDate(date),
-            log: 0
+            log: 0,
+            today: today.valueOf() === date.valueOf()
           };
         }
 

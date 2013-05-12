@@ -168,7 +168,7 @@ ul {
   text-align: right;
 }
 
-.day-today {
+.day-today a {
   background: #fff;
 }
 

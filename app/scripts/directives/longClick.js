@@ -6,8 +6,12 @@ angular.module('habitsApp')
       restrict: 'A',
       link: function postLink(scope, element, attrs) {
 
-        function run () {
+        function longClickRun () {
           scope.$apply(attrs.longClick);
+        }
+
+        function shortClickRun () {
+          scope.$apply(attrs.shortClick);
         }
 
         var wait = 500;
@@ -26,8 +30,11 @@ angular.module('habitsApp')
 
         element.bind('mouseup', function (e) {
           clearTimeout(timer);
+          if (e.target !== target) { return; }
           if (fired) {
-            run();
+            longClickRun();
+          } else  {
+            shortClickRun();
           }
           fired = false;
         });

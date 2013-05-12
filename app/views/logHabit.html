@@ -3,7 +3,7 @@
 <div class="day-viewer {{ logsInvisible | className:'hide' }}">
   <ul>
     <li ng-repeat="day in days" data-date="{{ day.date.valueOf() }}" class="{{ day.show | className:'show-update' }}">
-      <a ng-click="add(day.date)" long-click="updateBox(day)">
+      <a short-click="addLog(day)" long-click="showUpdate(day)">
         <span>{{ day.pretty }}</span>
         <span>{{ day.log }}</span>
       </a>

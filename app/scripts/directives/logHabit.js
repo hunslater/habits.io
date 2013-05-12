@@ -10,22 +10,24 @@ angular.module('habitsApp')
         $scope.logsInvisible = true;
         $scope.habit = $attrs.habit;
 
-        $scope.add = function (date) {
-          habits.addLog($scope.$index, date);
+        $scope.addLog = function (day) {
+          habits.addLog($scope.$index, day.date);
           $scope.update();
         };
 
-        $scope.update = function (date, amount) {
+        $scope.updateLog = function (date, amount) {
           habits.updateLog($scope.$index, date, amount);
+          $scope.update();
         };
 
-        $scope.updateBox = function (day) {
+        $scope.showUpdate = function (day) {
           day.show = true;
-        }
+        };
 
       }],
       link: function postLink(scope, element, attrs) {
 
+        var generated = false;
         scope.days = {};
         var today = new Date();
 
@@ -47,7 +49,7 @@ angular.module('habitsApp')
         }
 
         function makeDay (date) {
-          // normalize time
+          // normalise time
           date.setHours(1);
           date.setMinutes(0);
           date.setSeconds(0);
@@ -87,7 +89,10 @@ angular.module('habitsApp')
 
         scope.showLogs = function () {
           scope.logsInvisible = !scope.logsInvisible;
-          if (!scope.logsInvisible) { generateDays(today, scope.days); }
+          if (!generated) {
+            generateDays(today, scope.days);
+            generated = true;
+          }
           scope.update();
         };
 

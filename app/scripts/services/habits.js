@@ -83,6 +83,67 @@ angular.module('habitsApp')
 
       clearData: function () {
         storage.clear();
+      },
+
+      export: function () {
+
+        var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+        function fmtDate (date) {
+          if (!angular.isDate(date)) { return; }
+          return date.getDate() + ' ' + monthNames[date.getMonth()].substr(0, 3);
+        }
+
+        function normalise (date) {
+          if (!angular.isDate(date)) { return; }
+          date.setHours(1);
+          date.setMinutes(0);
+          date.setSeconds(0);
+          date.setMilliseconds(0);
+        }
+
+        var good = [];
+        var bad = [];
+        var labels = [];
+
+        var today = new Date();
+        normalise(today);
+
+        for (var i = 90; i >= 0; i--) {
+
+          var newDate = new Date;
+          newDate.setDate(today.getDate() - i);
+          normalise(newDate);
+          var dateStr = newDate.valueOf();
+
+          var goodCount = 0;
+          var badCount = 0;
+          var labelStr = fmtDate(newDate);
+
+          $rootScope.habits.forEach(function (el, i) {
+            var count = parseInt(el.logs[dateStr], 10);
+            if (isNaN(count)) { return; }
+            if (el.sentiment === 'good') {
+              goodCount += count;
+            }
+            if (el.sentiment == 'bad') {
+              badCount += count;
+            }
+          });
+
+          good.push(goodCount);
+          bad.push(badCount);
+          labels.push(labelStr);
+
+        }
+
+
+        return {
+          labels: labels,
+          good: good,
+          bad: bad
+        }
+
       }
 
     };

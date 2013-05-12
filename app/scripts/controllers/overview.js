@@ -10,4 +10,17 @@ angular.module('habitsApp')
       }
     };
 
+    $scope.chartTypes = [
+      [7, '1 week'],
+      [14, '2 weeks'],
+      [30, '1 month'],
+      [90, '3 months']
+    ];
+
+    $scope.chartShowing = 7;
+
+    $scope.updateChart = function (number) {
+      $scope.chartShowing = number;
+    }
+
   }]);

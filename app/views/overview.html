@@ -1,6 +1,16 @@
 <div class="overview">
 
-  <a class="btn" fast-click="clearData()">clear saved data</a>
+  <chart period="{{ chartShowing }}"></chart>
+
+  <div class="chart-controls">
+    <a ng-repeat="type in chartTypes"
+       class="btn btn-chart {{ chartShowing == type[0] | className:'btn-chart-selected' }}"
+       fast-click="updateChart(type[0])">
+        {{ type[1] }}
+    </a>
+  </div>
+
+  <a class="btn btn-chart btn-clear-data" fast-click="clearData()">Clear all saved data</a>
 
   <nav>
     <a href="#/habit" class="btn">Habits</a>

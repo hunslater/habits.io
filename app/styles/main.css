@@ -306,3 +306,31 @@ nav .btn:first-child {
 .dashboard {
   padding-bottom: 80px;
 }
+
+.chart-controls {
+  padding: 10px 20px 20px;
+}
+
+.btn-chart {
+  font-size: 12px;
+  padding: 2px 5px;
+  margin-right: 5px;
+}
+
+.btn-chart-selected {
+  background: #268bd2;
+}
+
+canvas {
+  margin: 20px 20px 0;
+  width: 280px;
+  height: 280px;
+}
+
+.btn-clear-data {
+  display: block;
+  width: 120px;
+  text-align: center;
+  background: #dc322f;
+  margin: auto;
+}

@@ -2,7 +2,7 @@
   <a long-click short-click="showLogs()">{{ habit.name }}</a>
 
   <div class="day-viewer {{ logsInvisible | className:'day-viewer-hidden' }}">
-    <ul class="day-list cf">
+    <ul class="day-list cf" style="left:{{ moveLeft }}px" drag-x="moveLeft()">
       <li ng-repeat="day in days" class="{{ day.show | className:'show-update' }} {{ day.today | className:'day-today' }}">
         <a short-click="addLog(day)" long-click="showUpdate(day)">
           <span class="day-day">{{ day.prettyDay }}</span>

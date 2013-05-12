@@ -20,12 +20,11 @@ angular.module('habitsApp')
       }],
       link: function postLink(scope, element, attrs) {
         scope.numbers = [];
+        for (var i = 0; i < 50; i++) {
+          scope.numbers.push(i);
+        }
         setTimeout(function (){
           scope.count = scope.day.log;
-          var max = scope.count > 20 ? scope.count + 2: 20;
-          for (var i = 0; i < max; i++) {
-            scope.numbers.push(i);
-          }
         }, 100);
       }
     };

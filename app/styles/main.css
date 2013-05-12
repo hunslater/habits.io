@@ -6,10 +6,16 @@
   border-radius: 0;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font: 16px/20px "Helvetica Neue", Helvetica, sans-serif;
   color: #93a1a1;
   background: #fdf6e3;
+  padding-bottom: 80px;
 }
 
 a {
@@ -18,12 +24,17 @@ a {
 
 input,
 button,
-textarea {
+textarea,
+select {
   font: 16px/20px "Helvetica Neue", Helvetica, sans-serif;
 }
 
 h1 {
   color: #b58900;
+  margin: 0 0 20px;
+}
+
+p {
   margin: 0 0 20px;
 }
 
@@ -94,28 +105,20 @@ ul {
 .habit-list a {
   display: block;
   padding: 10px 20px;
-  font-weight: bold;
 }
 
 .habit-li-good a {
   background: rgba(133, 153, 0, .2);
   color: #859900;
+  -webkit-tap-highlight-color: rgba(133, 153, 0, .15);
 }
 
 .habit-li-bad a {
   background: rgba(220, 50, 47, .25);
   color: #dc322f;
+  -webkit-tap-highlight-color: rgba(220, 50, 47, .15);
 }
 
-
-.habit-done {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 20px;
-  background: rgba(253, 246, 227, .75);
-}
 
 .btn-trash {
   position: absolute;
@@ -127,12 +130,20 @@ ul {
 }
 
 .day-viewer {
+  position: relative;
   height: 80px;
   overflow: hidden;
+  -webkit-transition: height 0.3s ease-out;
+}
+
+.day-viewer-hidden {
+  height: 0;
 }
 
 .day-list {
-  width: 1280px; /* 16*80 */
+  width: 1204px; /* 15*80+4 */
+  position: absolute;
+  left: -442px; /* 1204-320/2 */
   border: 2px solid #fdf6e3;
 }
 
@@ -201,7 +212,7 @@ update {
 
 .update-cover {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -216,12 +227,63 @@ update {
 }
 
 .update-inner {
-  position: absolute;
-  top: 120px;
-  bottom: 120px;
-  left: 40px;
-  right: 40px;
+  position: fixed;
+  top: 100px;
+  bottom: 100px;
+  left: 20px;
+  right: 20px;
   background: #fdf6e3;
   padding: 40px;
 }
 
+.update-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.update-good {
+  color: #859900;
+}
+
+.update-bad {
+  color: #dc322f;
+}
+
+.btn-update {
+  width: 45%;
+  float: right;
+}
+
+.update-select {
+  width: 45%;
+  float: left;
+  border: 0;
+  background: #93a1a1;
+  color: #fff;
+  padding: 10px 20px;
+  -webkit-appearance: none;
+}
+
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: rgba(253, 246, 227, .75);
+}
+
+nav:after {
+  clear: both;
+}
+
+nav .btn {
+  width: 45%;
+  float: right;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+nav .btn:first-child {
+  float: left;
+}

@@ -1,7 +1,7 @@
 <li class="habit-li-{{ habit.sentiment }}">
-  <a ng-click="showLogs()">{{ habit.name }}</a>
+  <a long-click short-click="showLogs()">{{ habit.name }}</a>
 
-  <div class="day-viewer {{ logsInvisible | className:'hide' }}">
+  <div class="day-viewer {{ logsInvisible | className:'day-viewer-hidden' }}">
     <ul class="day-list cf">
       <li ng-repeat="day in days" class="{{ day.show | className:'show-update' }} {{ day.today | className:'day-today' }}">
         <a short-click="addLog(day)" long-click="showUpdate(day)">

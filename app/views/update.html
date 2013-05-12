@@ -1,12 +1,12 @@
 <a ng-click="close()" class="update-cover"></a>
 
 <div class="update-inner">
-  <h2>Update</h2>
-  <p><strong>{{ $parent.habit.name }}</strong></p>
+  <p>Update</p>
+  <p class="update-name update-{{ $parent.habit.sentiment }}">{{ $parent.habit.name }}</p>
   <p>{{ day.pretty }}</p>
-  <select ng-model="count">
+  <select class="update-select" ng-model="count">
     <option ng-repeat="i in numbers">{{ i }}</option>
   </select>
 
-  <button ng-click="updateDay(count)">Update</button>
+  <button class="btn btn-update btn-{{ $parent.habit.sentiment }}" ng-click="updateDay(count)">Update</button>
 </div>

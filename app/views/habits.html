@@ -2,12 +2,12 @@
 
   <div class="habit-form cf">
     <input class="tinput habit-tinput" placeholder="{{ placeholder }}" ng-model="name" />
-    <button class="btn btn-bad" ng-click="update(id, name, 'bad')">bad</button>
-    <button class="btn btn-good" ng-click="update(id, name, 'good')">good</button>
+    <button class="btn btn-bad" fast-click="update(id, name, 'bad')">bad</button>
+    <button class="btn btn-good" fast-click="update(id, name, 'good')">good</button>
   </div>
 
   <ul class="habit-list">
-    <li ng-repeat="habit in habits" class="habit-li-{{ habit.sentiment }}"><a href="#/habit/{{ $index }}">{{ habit.name }}</a> <button class="btn btn-trash" ng-click="del($index, habit.name)"><i class="icon-trash"></i></button></li>
+    <li ng-repeat="habit in habits" class="habit-li-{{ habit.sentiment }}"><a href="#/habit/{{ $index }}">{{ habit.name }}</a> <button class="btn btn-trash" fast-click="del($index, habit.name)"><i class="icon-trash"></i></button></li>
   </ul>
 
   <nav class="{{ habits.length == 0 | className:'hide' }}">

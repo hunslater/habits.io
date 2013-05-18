@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('habitsApp')
-  .controller('OverviewCtrl', ['$scope', '$location', 'habits', function ($scope, $location, habits) {
+  .controller('OverviewCtrl', ['$scope', '$rootScope', '$location', 'habits', function ($scope, $rootScope, $location, habits) {
 
     $scope.clearData = function () {
-      if (window.confirm('Are you sure you want to clear all saved data?')) {
+      if ($trootScope.confirm('Are you sure you want to clear all saved data?')) {
         habits.clearData();
         $location.path('/');
       }

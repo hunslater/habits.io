@@ -11,16 +11,6 @@ angular.module('habitsApp')
         $scope.habit = $attrs.habit;
         $scope.id = $scope.$index;
 
-        $scope.addLog = function (day) {
-          habits.addLog($scope.$index, day.date);
-          $scope.update();
-        };
-
-        $scope.updateLog = function (date, amount) {
-          habits.updateLog($scope.$index, date, amount);
-          $scope.update();
-        };
-
         var slice = Array.prototype.slice;
 
         $scope.showUpdate = function (id, name, sentiment, date, dateStr, count) {

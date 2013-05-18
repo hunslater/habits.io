@@ -244,8 +244,8 @@ update,
 .modal-inner,
 .update-inner {
   position: fixed;
-  top: 80px;
-  bottom: 80px;
+  top: 90px;
+  bottom: 90px;
   left: 20px;
   right: 20px;
   background: #fdf6e3;
@@ -310,7 +310,9 @@ nav .btn,
 }
 
 nav .btn:first-child,
-.btn-row .btn:first-child {
+.btn-row .btn:first-child,
+.btn-row select {
+  width: 45%;
   float: left;
 }
 

@@ -34,10 +34,12 @@
         <p>Update</p>
         <p class="update-name update-{{ sentiment }}">{{ name }}</p>
         <p>{{ dateStr }}</p>
-        <select class="update-select" ng-model="count">
-          <option ng-repeat="i in numbers">{{ i }}</option>
-        </select>
-        <button class="btn btn-update btn-{{ sentiment }}" fast-click="updateDay(count)">Update</button>
+        <div class="btn-row cf">
+          <select class="update-select" ng-model="count">
+            <option ng-repeat="i in numbers">{{ i }}</option>
+          </select>
+          <button class="btn btn-update btn-{{ sentiment }}" fast-click="updateDay(count)">Update</button>
+        </div>
       </div>
     </div>
 

@@ -4,12 +4,11 @@
   <div class="day-viewer {{ logsInvisible | className:'day-viewer-hidden' }}">
     <ul class="day-list cf" drag-x="moveLeft()">
       <li ng-repeat="day in days" class="{{ day.show | className:'show-update' }} {{ day.today | className:'day-today' }}">
-        <a short-click="addLog(day)" long-click="showUpdate(day)">
+        <a short-click="addLog(day)" long-click="showUpdate(id, habit.name, habit.sentiment, day.date, day.prettyDay + ' ' + day.prettyDate, day.log)">
           <span class="day-day">{{ day.prettyDay }}</span>
           <span class="day-date">{{ day.prettyDate }}</span>
           <span class="day-log">{{ day.log }}</span>
         </a>
-        <update date="{{ day }}"></update>
       </li>
     </ul>
   </div>

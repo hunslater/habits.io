@@ -28,6 +28,19 @@
       </div>
     </div>
 
+    <div ng-controller="UpdateCtrl" class="modal-outer {{ updateDisplay | className:'modal-showing' }}">
+      <a fast-click="close()" class="modal-cover"></a>
+      <div class="modal-inner">
+        <p>Update</p>
+        <p class="update-name update-{{ sentiment }}">{{ name }}</p>
+        <p>{{ dateStr }}</p>
+        <select class="update-select" ng-model="count">
+          <option ng-repeat="i in numbers">{{ i }}</option>
+        </select>
+        <button class="btn btn-update btn-{{ sentiment }}" fast-click="updateDay(count)">Update</button>
+      </div>
+    </div>
+
     <script src="components/angular/angular.js"></script>
 
     <!-- build:js scripts/scripts.js -->
@@ -48,6 +61,7 @@
     <script src="scripts/directives/fastClick.js"></script>
     <script src="scripts/directives/chart.js"></script>
     <script src="scripts/controllers/confirm.js"></script>
+    <script src="scripts/controllers/update.js"></script>
     <!-- endbuild -->
 
   </body>

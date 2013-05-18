@@ -5,10 +5,11 @@ angular.module('habitsApp')
     return {
       templateUrl: 'views/logHabit.html',
       restrict: 'E',
-      controller: ['$scope', '$attrs', 'habits', function ($scope, $attrs, habits) {
+      controller: ['$scope', '$rootScope', '$attrs', 'habits', function ($scope, $rootScope, $attrs, habits) {
 
         $scope.logsInvisible = true;
         $scope.habit = $attrs.habit;
+        $scope.id = $scope.$index;
 
         $scope.addLog = function (day) {
           habits.addLog($scope.$index, day.date);
@@ -20,8 +21,14 @@ angular.module('habitsApp')
           $scope.update();
         };
 
-        $scope.showUpdate = function (day) {
-          day.show = true;
+        var slice = Array.prototype.slice;
+
+        $scope.showUpdate = function (id, name, sentiment, date, dateStr, count) {
+          var args = slice.call(arguments);
+          args.push(function () {
+            $scope.update();
+          });
+          $rootScope.updateHabit.apply(null, args);
         };
 
       }],

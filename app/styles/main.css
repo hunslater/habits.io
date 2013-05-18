@@ -244,12 +244,12 @@ update,
 .modal-inner,
 .update-inner {
   position: fixed;
-  top: 90px;
-  bottom: 90px;
+  top: 80px;
+  bottom: 80px;
   left: 20px;
   right: 20px;
   background: #fdf6e3;
-  padding: 40px;
+  padding: 20px;
 }
 
 .update-name {
@@ -296,9 +296,9 @@ nav:after {
 .btn-row {
   display: block;
   position: absolute;
-  bottom: 40px;
-  left: 40px;
-  right: 40px;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
 }
 
 nav .btn,

@@ -18,7 +18,7 @@ angular.module('habitsApp')
     }
 
     function checkName (str) {
-      return typeof str === "undefined" || str.trim() === "";
+      return typeof str === 'undefined' || str.trim() === '';
     }
 
     return {

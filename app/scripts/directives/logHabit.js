@@ -18,7 +18,7 @@ angular.module('habitsApp')
 
         var slice = Array.prototype.slice;
 
-        $scope.showUpdate = function (id, name, sentiment, date, dateStr, count) {
+        $scope.showUpdate = function () {
           var args = slice.call(arguments);
           args.push(function () {
             $scope.update();

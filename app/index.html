@@ -17,6 +17,17 @@
     <!-- Add your site or application content here -->
     <div class="container" ng-view></div>
 
+    <div ng-controller="ConfirmCtrl" class="modal-outer {{ confirmDisplay | className:'modal-showing' }}">
+      <a fast-click="close()" class="modal-cover"></a>
+      <div class="modal-inner">
+        <p><b>{{ message }}</b></p>
+        <div class="btn-row cf">
+          <a class="btn btn-good" fast-click="accept()">{{ accept }}</a>
+          <a class="btn btn-bad" fast-click="close()">{{ cancel }}</a>
+        </div>
+      </div>
+    </div>
+
     <script src="components/angular/angular.js"></script>
 
     <!-- build:js scripts/scripts.js -->
@@ -36,6 +47,7 @@
     <script src="scripts/directives/dragX.js"></script>
     <script src="scripts/directives/fastClick.js"></script>
     <script src="scripts/directives/chart.js"></script>
+    <script src="scripts/controllers/confirm.js"></script>
     <!-- endbuild -->
 
   </body>

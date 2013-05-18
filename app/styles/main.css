@@ -206,7 +206,8 @@ ul {
   display: none;
 }
 
-update {
+update,
+.modal-outer {
   display: none;
   position: fixed;
   top: 0;
@@ -217,10 +218,12 @@ update {
   background: rgba(0, 0, 0, .35);
 }
 
+.modal-outer.modal-showing,
 .show-update update {
   display: block;
 }
 
+.modal-cover,
 .update-cover {
   display: block;
   position: fixed;
@@ -231,12 +234,14 @@ update {
 }
 
 /* hack for specificity */
+.modal-outer .modal-cover,
 .day-list .update-cover {
   width: auto;
   height: auto;
   background: none;
 }
 
+.modal-inner,
 .update-inner {
   position: fixed;
   top: 80px;

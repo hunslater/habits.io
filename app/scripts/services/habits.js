@@ -17,6 +17,10 @@ angular.module('habitsApp')
       return !goodBadRe.test(str);
     }
 
+    function checkName (str) {
+      return typeof name === "undefined" || name.trim() === "";
+    }
+
     return {
 
       exists: function () {
@@ -33,7 +37,8 @@ angular.module('habitsApp')
       },
 
       addHabit: function (name, sentiment) {
-        if(checkSentiment(sentiment)) { return; }
+        if (checkSentiment(sentiment)) { return; }
+        if (checkName(name)) { return; }
         $rootScope.habits.push({
           name: name,
           sentiment: sentiment,
@@ -49,8 +54,9 @@ angular.module('habitsApp')
       },
 
       editHabit: function (id, name, sentiment) {
-        if (checkSentiment(sentiment)) { return; }
         if (checkId(id)) { return; }
+        if (checkName(name)) { return; }
+        if (checkSentiment(sentiment)) { return; }
         $rootScope.habits[id].name = name;
         $rootScope.habits[id].sentiment = sentiment;
         save();

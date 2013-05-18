@@ -293,14 +293,24 @@ nav:after {
   clear: both;
 }
 
-nav .btn {
+.btn-row {
+  display: block;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  right: 40px;
+}
+
+nav .btn,
+.btn-row .btn {
   width: 45%;
   float: right;
   text-align: center;
   text-transform: lowercase;
 }
 
-nav .btn:first-child {
+nav .btn:first-child,
+.btn-row .btn:first-child {
   float: left;
 }
 

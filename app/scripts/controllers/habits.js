@@ -3,11 +3,12 @@
 angular.module('habitsApp')
   .controller('HabitCtrl', [
     '$scope',
+    '$rootScope',
     '$routeParams',
     '$location',
     'habits',
     'randomHabit',
-    function ($scope, $routeParams, $location, habits, randomHabit) {
+    function ($scope, $rootScope, $routeParams, $location, habits, randomHabit) {
 
       if (angular.isString($routeParams.id)) {
         var id = parseInt($routeParams.id, 10);
@@ -38,9 +39,9 @@ angular.module('habitsApp')
 
       $scope.del = function (id, name) {
         // todo look at using a custom confirm box
-        if (window.confirm('Are you sure you want to delete "' + name + '"?')) {
+        $rootScope.confirm('Are you sure you want to delete "' + name + '"?', function() {
           habits.delHabit(id);
-        }
+        });
       };
 
     }

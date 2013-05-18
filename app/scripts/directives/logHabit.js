@@ -4,7 +4,7 @@ angular.module('habitsApp')
   .directive('logHabit', function () {
     return {
       templateUrl: 'views/logHabit.html',
-      restrict: 'E',
+      restrict: 'A',
       controller: ['$scope', '$rootScope', '$attrs', 'habits', function ($scope, $rootScope, $attrs, habits) {
 
         $scope.logsInvisible = true;

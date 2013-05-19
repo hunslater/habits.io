@@ -1,0 +1,119 @@
+2013-05-18 19:46:29.930 Habits[19561:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-18 19:46:30.343 Habits[19561:c07] Resetting plugins due to page load.
+2013-05-18 19:46:30.521 Habits[19561:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/BBEB4145-68E8-4459-9BA6-1F5F28D30C8C/Habits.app/www/index.html
+2013-05-18 19:46:30.536 Habits[19561:c07] DEPRECATION NOTICE: The Connection ReachableViaWWAN return value of '2g' is deprecated as of Cordova version 2.6.0 and will be changed to 'cellular' in a future release. 
+2013-05-18 19:46:30.543 Habits[19561:c07] Received Event: deviceready
+Terminating in response to SpringBoard's termination.
+2013-05-18 19:50:54.614 Habits[19904:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-18 19:50:54.646 Habits[19904:c07] Resetting plugins due to page load.
+2013-05-18 19:50:54.710 Habits[19904:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/BBEB4145-68E8-4459-9BA6-1F5F28D30C8C/Habits.app/www/index.html
+Terminating in response to SpringBoard's termination.
+2013-05-18 19:59:02.667 Habits[20155:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-18 19:59:02.698 Habits[20155:c07] Resetting plugins due to page load.
+2013-05-18 19:59:02.728 Habits[20155:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/BBEB4145-68E8-4459-9BA6-1F5F28D30C8C/Habits.app/www/index.html
+2013-05-18 20:06:59.938 Habits[20232:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-18 20:06:59.968 Habits[20232:c07] Resetting plugins due to page load.
+2013-05-18 20:07:00.005 Habits[20232:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/BBEB4145-68E8-4459-9BA6-1F5F28D30C8C/Habits.app/www/index.html
+2013-05-18 20:07:00.025 Habits[20232:c07] DEPRECATION NOTICE: The Connection ReachableViaWWAN return value of '2g' is deprecated as of Cordova version 2.6.0 and will be changed to 'cellular' in a future release. 
+Terminating in response to SpringBoard's termination.
+2013-05-18 20:07:18.000 Habits[20287:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-18 20:07:18.031 Habits[20287:c07] Resetting plugins due to page load.
+2013-05-18 20:07:18.068 Habits[20287:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/BBEB4145-68E8-4459-9BA6-1F5F28D30C8C/Habits.app/www/index.html
+2013-05-18 20:07:18.096 Habits[20287:c07] DEPRECATION NOTICE: The Connection ReachableViaWWAN return value of '2g' is deprecated as of Cordova version 2.6.0 and will be changed to 'cellular' in a future release. 
+2013-05-18 20:09:06.213 Habits[20625:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-18 20:09:06.245 Habits[20625:c07] Resetting plugins due to page load.
+2013-05-18 20:09:06.286 Habits[20625:c07] DEPRECATION NOTICE: The Connection ReachableViaWWAN return value of '2g' is deprecated as of Cordova version 2.6.0 and will be changed to 'cellular' in a future release. 
+2013-05-18 20:09:21.969 Habits[20625:2703] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2013-05-18 20:09:22.162 Habits[20625:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/BBEB4145-68E8-4459-9BA6-1F5F28D30C8C/Habits.app/www/index.html
+2013-05-18 20:32:47.554 Habits[21713:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-18 20:32:47.608 Habits[21713:c07] Resetting plugins due to page load.
+2013-05-18 20:32:47.701 Habits[21713:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/BBEB4145-68E8-4459-9BA6-1F5F28D30C8C/Habits.app/www/index.html#/
+2013-05-18 20:41:41.758 Habits[22289:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-18 20:41:41.788 Habits[22289:c07] Resetting plugins due to page load.
+2013-05-18 20:41:41.855 Habits[22289:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/BBEB4145-68E8-4459-9BA6-1F5F28D30C8C/Habits.app/www/index.html#/
+2013-05-18 20:43:29.738 Habits[22670:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-18 20:43:29.769 Habits[22670:c07] Resetting plugins due to page load.
+2013-05-18 20:43:29.838 Habits[22670:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/BBEB4145-68E8-4459-9BA6-1F5F28D30C8C/Habits.app/www/index.html#/
+2013-05-18 20:49:08.737 Habits[23085:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-18 20:49:08.768 Habits[23085:c07] Resetting plugins due to page load.
+2013-05-18 20:49:08.840 Habits[23085:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/BBEB4145-68E8-4459-9BA6-1F5F28D30C8C/Habits.app/www/index.html#/
+2013-05-18 20:49:39.275 Habits[23437:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-18 20:49:39.310 Habits[23437:c07] Resetting plugins due to page load.
+2013-05-18 20:49:39.379 Habits[23437:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/BBEB4145-68E8-4459-9BA6-1F5F28D30C8C/Habits.app/www/index.html#/
+Terminating in response to SpringBoard's termination.
+2013-05-18 20:51:40.549 Habits[23836:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-18 20:51:40.580 Habits[23836:c07] Resetting plugins due to page load.
+2013-05-18 20:51:40.649 Habits[23836:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/BBEB4145-68E8-4459-9BA6-1F5F28D30C8C/Habits.app/www/index.html#/
+2013-05-19 00:01:20.353 Habits[24400:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-19 00:01:20.385 Habits[24400:c07] Resetting plugins due to page load.
+2013-05-19 00:01:20.453 Habits[24400:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/BBEB4145-68E8-4459-9BA6-1F5F28D30C8C/Habits.app/www/index.html#/
+2013-05-19 09:58:56.623 Habits[24992:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-19 09:58:56.654 Habits[24992:c07] Resetting plugins due to page load.
+2013-05-19 09:58:56.720 Habits[24992:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/BBEB4145-68E8-4459-9BA6-1F5F28D30C8C/Habits.app/www/index.html#/
+2013-05-19 10:15:34.871 Habits[28058:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-19 10:15:34.916 Habits[28058:c07] Resetting plugins due to page load.
+2013-05-19 10:15:35.179 Habits[28058:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/BBEB4145-68E8-4459-9BA6-1F5F28D30C8C/Habits.app/www/index.html#/
+2013-05-19 10:19:36.886 Habits[28559:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-19 10:19:36.918 Habits[28559:c07] Resetting plugins due to page load.
+2013-05-19 10:19:36.983 Habits[28559:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/BBEB4145-68E8-4459-9BA6-1F5F28D30C8C/Habits.app/www/index.html#/
+2013-05-19 10:27:20.547 Habits[28981:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-19 10:27:20.580 Habits[28981:c07] Resetting plugins due to page load.
+2013-05-19 10:27:20.648 Habits[28981:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/BBEB4145-68E8-4459-9BA6-1F5F28D30C8C/Habits.app/www/index.html#/
+Terminating in response to SpringBoard's termination.
+2013-05-19 10:27:57.191 Habits[29040:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-19 10:27:57.224 Habits[29040:c07] Resetting plugins due to page load.
+2013-05-19 10:27:57.296 Habits[29040:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/BBEB4145-68E8-4459-9BA6-1F5F28D30C8C/Habits.app/www/index.html#/
+2013-05-19 10:28:08.533 Habits[29120:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-19 10:28:08.566 Habits[29120:c07] Resetting plugins due to page load.
+2013-05-19 10:28:08.618 Habits[29120:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/BBEB4145-68E8-4459-9BA6-1F5F28D30C8C/Habits.app/www/index.html
+2013-05-19 10:28:13.055 Habits[29141:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-19 10:28:13.089 Habits[29141:c07] Resetting plugins due to page load.
+2013-05-19 10:28:13.118 Habits[29141:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/BBEB4145-68E8-4459-9BA6-1F5F28D30C8C/Habits.app/www/index.html
+2013-05-19 10:28:19.275 Habits[29471:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-19 10:28:19.306 Habits[29471:c07] Resetting plugins due to page load.
+2013-05-19 10:28:19.370 Habits[29471:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/BBEB4145-68E8-4459-9BA6-1F5F28D30C8C/Habits.app/www/index.html#/
+2013-05-19 10:28:40.315 Habits[29504:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-19 10:28:40.374 Habits[29504:c07] Resetting plugins due to page load.
+2013-05-19 10:28:40.440 Habits[29504:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/65E9B377-600A-4FF8-8E68-31FB99F03E1B/Habits.app/www/index.html#/
+2013-05-19 10:30:25.070 Habits[29955:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-19 10:30:25.102 Habits[29955:c07] Resetting plugins due to page load.
+2013-05-19 10:30:25.168 Habits[29955:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/65E9B377-600A-4FF8-8E68-31FB99F03E1B/Habits.app/www/index.html#/
+2013-05-19 11:11:07.309 Habits[31351:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-19 11:11:07.343 Habits[31351:c07] Resetting plugins due to page load.
+2013-05-19 11:11:07.413 Habits[31351:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/65E9B377-600A-4FF8-8E68-31FB99F03E1B/Habits.app/www/index.html#/
+2013-05-19 11:20:12.207 Habits[32060:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-19 11:20:12.243 Habits[32060:c07] Resetting plugins due to page load.
+2013-05-19 11:20:12.317 Habits[32060:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/65E9B377-600A-4FF8-8E68-31FB99F03E1B/Habits.app/www/index.html#/
+2013-05-19 12:01:24.358 Habits[32709:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-19 12:01:24.424 Habits[32709:c07] Resetting plugins due to page load.
+2013-05-19 12:01:24.521 Habits[32709:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/65E9B377-600A-4FF8-8E68-31FB99F03E1B/Habits.app/www/index.html#/
+2013-05-19 12:03:56.135 Habits[33094:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-19 12:03:56.166 Habits[33094:c07] Resetting plugins due to page load.
+2013-05-19 12:03:56.231 Habits[33094:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/65E9B377-600A-4FF8-8E68-31FB99F03E1B/Habits.app/www/index.html#/
+2013-05-19 12:20:47.119 Habits[33721:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-19 12:20:47.154 Habits[33721:c07] Resetting plugins due to page load.
+2013-05-19 12:20:47.220 Habits[33721:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/65E9B377-600A-4FF8-8E68-31FB99F03E1B/Habits.app/www/index.html#/
+2013-05-19 12:23:38.002 Habits[34107:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-19 12:23:38.035 Habits[34107:c07] Resetting plugins due to page load.
+2013-05-19 12:23:38.102 Habits[34107:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/65E9B377-600A-4FF8-8E68-31FB99F03E1B/Habits.app/www/index.html#/
+2013-05-19 12:24:22.580 Habits[34527:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-19 12:24:22.612 Habits[34527:c07] Resetting plugins due to page load.
+2013-05-19 12:24:22.678 Habits[34527:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/65E9B377-600A-4FF8-8E68-31FB99F03E1B/Habits.app/www/index.html#/
+2013-05-19 13:18:22.927 Habits[35321:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-19 13:18:22.958 Habits[35321:c07] Resetting plugins due to page load.
+2013-05-19 13:18:23.027 Habits[35321:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/65E9B377-600A-4FF8-8E68-31FB99F03E1B/Habits.app/www/index.html#/
+2013-05-19 13:18:23.044 Habits[35321:c07] DEPRECATION NOTICE: The Connection ReachableViaWWAN return value of '2g' is deprecated as of Cordova version 2.6.0 and will be changed to 'cellular' in a future release. 
+2013-05-19 14:11:29.883 Habits[35901:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-19 14:11:29.917 Habits[35901:c07] Resetting plugins due to page load.
+2013-05-19 14:11:29.990 Habits[35901:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/65E9B377-600A-4FF8-8E68-31FB99F03E1B/Habits.app/www/index.html#/
+2013-05-19 14:11:30.006 Habits[35901:c07] DEPRECATION NOTICE: The Connection ReachableViaWWAN return value of '2g' is deprecated as of Cordova version 2.6.0 and will be changed to 'cellular' in a future release. 
+2013-05-19 15:11:09.327 Habits[37098:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-19 15:11:09.359 Habits[37098:c07] Resetting plugins due to page load.
+2013-05-19 15:11:09.426 Habits[37098:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/65E9B377-600A-4FF8-8E68-31FB99F03E1B/Habits.app/www/index.html#/
+2013-05-19 15:16:45.531 Habits[37570:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-19 15:16:45.562 Habits[37570:c07] Resetting plugins due to page load.
+2013-05-19 15:16:45.628 Habits[37570:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/65E9B377-600A-4FF8-8E68-31FB99F03E1B/Habits.app/www/index.html#/
+2013-05-19 15:23:10.995 Habits[38099:c07] Multi-tasking -> Device: YES, App: YES
+2013-05-19 15:23:11.026 Habits[38099:c07] Resetting plugins due to page load.
+2013-05-19 15:23:11.096 Habits[38099:c07] Finished load of: file:///Users/dans/Library/Application%20Support/iPhone%20Simulator/6.1/Applications/65E9B377-600A-4FF8-8E68-31FB99F03E1B/Habits.app/www/index.html#/
+2013-05-19 15:23:11.112 Habits[38099:c07] DEPRECATION NOTICE: The Connection ReachableViaWWAN return value of '2g' is deprecated as of Cordova version 2.6.0 and will be changed to 'cellular' in a future release. 

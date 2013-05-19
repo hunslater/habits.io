@@ -257,12 +257,6 @@ module.exports = function (grunt) {
           ]
         }]
       }
-    },
-    ngtemplates: {
-      dist: {
-        src: '<%= yeoman.app %>/views/**.html',
-        dest: '<%= yeoman.app %>/scripts/templates.js'
-      }
     }
   });
 
@@ -296,7 +290,6 @@ module.exports = function (grunt) {
                      'imagemin',
                      'cssmin',
                      'htmlmin',
-                     'ngtemplates',
                      'concat',
                      'copy',
                      'cdnify',

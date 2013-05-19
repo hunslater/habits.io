@@ -111,6 +111,7 @@ angular.module('habitsApp')
         var good = [];
         var bad = [];
         var labels = [];
+        var blank = [];
 
         var today = new Date();
         normalise(today);
@@ -142,6 +143,7 @@ angular.module('habitsApp')
           good.push(goodCount);
           bad.push(badCount);
           labels.push(labelStr);
+          blank.push('');
 
         }
 
@@ -149,7 +151,8 @@ angular.module('habitsApp')
         return {
           labels: labels,
           good: good,
-          bad: bad
+          bad: bad,
+          blank: blank
         };
 
       }

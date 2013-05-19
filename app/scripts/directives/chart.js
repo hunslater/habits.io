@@ -12,6 +12,7 @@ angular.module('habitsApp')
         var good = out.good;
         var bad = out.bad;
         var labels = out.labels;
+        var blank = out.blank;
 
         var red = '220, 50, 47';
         var green = '133, 153, 0';
@@ -33,7 +34,7 @@ angular.module('habitsApp')
         $scope.buildData = function (amount) {
           if (!angular.isNumber(amount) && amount <= 30) { return; }
           return {
-            labels: lastFromArr(labels, amount),
+            labels: lastFromArr(blank, amount),
             datasets: [
               {
                 fillColor: rgba(green, '.3'),
@@ -58,7 +59,7 @@ angular.module('habitsApp')
           scaleShowGridLines: false,
           scaleShowLabels: false,
           barStrokeWidth: 1,
-          barValueSpacing: 2
+          barValueSpacing: 5
         };
 
         scope.$watch('chartShowing', function (p) {

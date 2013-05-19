@@ -21,6 +21,7 @@ body {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 input,
@@ -58,6 +59,7 @@ ul {
 
 .btn {
   font-family: "Roboto-Medium";
+  cursor: pointer;
   display: inline-block;
   padding: 10px 20px;
   border: 0;

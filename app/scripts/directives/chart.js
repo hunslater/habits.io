@@ -54,11 +54,16 @@ angular.module('habitsApp')
 
         var ctx = element[0].getContext('2d');
 
+        var barConfig = {
+          scaleShowGridLines: false,
+          scaleShowLabels: false,
+          barStrokeWidth: 1,
+          barValueSpacing: 2
+        };
+
         scope.$watch('chartShowing', function (p) {
           p = p || parseInt(attrs.period, 10);
-          new window.Chart(ctx).Bar(scope.buildData(p), {
-
-          });
+          new window.Chart(ctx).Bar(scope.buildData(p), barConfig);
         }, true);
 
       }

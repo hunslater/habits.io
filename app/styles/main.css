@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   border-radius: 0;
+  -webkit-user-select: none;
 }
 
 html,
@@ -149,7 +150,6 @@ ul {
   height: 80px;
   overflow: hidden;
   -webkit-transition: height 0.3s ease-out;
-  -webkit-user-select: none;
 }
 
 .day-viewer-hidden {

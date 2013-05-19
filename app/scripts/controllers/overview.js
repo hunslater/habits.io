@@ -4,10 +4,10 @@ angular.module('habitsApp')
   .controller('OverviewCtrl', ['$scope', '$rootScope', '$location', 'habits', function ($scope, $rootScope, $location, habits) {
 
     $scope.clearData = function () {
-      if ($trootScope.confirm('Are you sure you want to clear all saved data?')) {
+      $rootScope.confirm('Are you sure you want to clear all saved data?', function () {
         habits.clearData();
         $location.path('/');
-      }
+      });
     };
 
     $scope.chartTypes = [

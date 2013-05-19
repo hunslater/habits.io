@@ -12,7 +12,8 @@ body {
 }
 
 body {
-  font: 16px/20px "Helvetica Neue", Helvetica, sans-serif;
+  position: relative;
+  font: 16px/20px "Roboto-Thin", "Helvetica Neue", Helvetica, sans-serif;
   color: #93a1a1;
   background: #fdf6e3;
   padding-bottom: 80px;
@@ -113,6 +114,7 @@ ul {
 }
 
 .habit-list a {
+  font-family: "Roboto-Medium";
   display: block;
   padding: 10px 20px;
 }
@@ -209,7 +211,7 @@ ul {
 update,
 .modal-outer {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
@@ -226,7 +228,7 @@ update,
 .modal-cover,
 .update-cover {
   display: block;
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
@@ -243,7 +245,7 @@ update,
 
 .modal-inner,
 .update-inner {
-  position: fixed;
+  position: absolute;
   top: 80px;
   bottom: 80px;
   left: 20px;
@@ -253,7 +255,7 @@ update,
 }
 
 .update-name {
-  font-weight: bold;
+  font-family: "Roboto-Medium";
   font-size: 20px;
 }
 
@@ -281,7 +283,7 @@ update,
 }
 
 nav {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;

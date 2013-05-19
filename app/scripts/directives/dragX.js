@@ -7,11 +7,17 @@ angular.module('habitsApp')
       link: function postLink(scope, element) {
 
         var maxLeft = 0;
-        var minLeft = -884; // 1204 - 320
+        var minLeft = -882; // 1204 (2 week row) - 320 (viewport) - 2 (border right)
         var start = -442;
 
         function changeLeft (amount) {
-          var now = parseInt(element.css('left'), 10) || start;
+          var i = parseInt(element.css('left'), 10);
+          var now;
+          if (i || i === 0) {
+            now = i;
+          } else {
+            now = start;
+          }
           var total = now - amount;
           if (total > maxLeft) {
             return maxLeft;
@@ -31,7 +37,7 @@ angular.module('habitsApp')
         element.bind('touchmove', function (e) {
           var x = e.touches[0].screenX;
           if (finger === x) { return; }
-          element.css('left',  changeLeft(finger - x) + 'px');
+          element.css('left', changeLeft(finger - x) + 'px');
           finger = x;
         }, true);
 

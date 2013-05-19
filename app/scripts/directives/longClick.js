@@ -21,10 +21,13 @@ angular.module('habitsApp')
         var target;
         var timer = 0;
         var fired = false;
+        var currX = 0;
 
         element.bind('touchstart', function (e) {
           if (timer !== 0) { clearTimeout(timer); }
-          target = e.touches.item(0).target;
+          var touch = e.touches.item(0);
+          target = touch.target;
+          currX = touch.pageX;
           timer = setTimeout(function () {
             fired = true;
             timer = 0;
@@ -37,6 +40,8 @@ angular.module('habitsApp')
           var x = touch.pageX;
           var y = touch.pageY;
           if (document.elementFromPoint(x, y) !== target) { return; }
+          if (Math.abs(x - currX) > 25) { return; };
+          currX = 0;
           if (fired) {
             longClickRun();
           } else  {

@@ -32,6 +32,7 @@ angular.module('habitsApp')
           var x = e.touches[0].screenX;
           if (finger === x) { return; }
           element.css('left',  changeLeft(finger - x) + 'px');
+          finger = x;
         }, true);
 
         element.bind('touchend', function () {

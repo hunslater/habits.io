@@ -27,7 +27,11 @@ angular.module('habitsApp')
         };
 
       }],
-      link: function postLink(scope) {
+      link: function postLink(scope, element) {
+
+        setTimeout(function () {
+          element.addClass('habit-li-' + scope.habit.sentiment);
+        }, 1);
 
         var generated = false;
         scope.days = {};

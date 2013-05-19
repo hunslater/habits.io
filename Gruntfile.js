@@ -257,47 +257,55 @@ module.exports = function (grunt) {
           ]
         }]
       }
+    },
+    ngtemplates: {
+      dist: {
+        src: '<%= yeoman.app %>/views/**.html',
+        dest: '<%= yeoman.app %>/scripts/templates.js'
+      }
     }
   });
 
   grunt.renameTask('regarde', 'watch');
 
   grunt.registerTask('server', [
-    'clean:server',
-    'coffee:dist',
-    'compass:server',
-    'livereload-start',
-    'connect:livereload',
-    'open',
-    'watch'
+                     'clean:server',
+                     'coffee:dist',
+                     'compass:server',
+                     'livereload-start',
+                     'connect:livereload',
+                     'open',
+                     'watch'
   ]);
 
   grunt.registerTask('test', [
-    'clean:server',
-    'coffee',
-    'compass',
-    'connect:test',
-    'karma'
+                     'clean:server',
+                     'coffee',
+                     'compass',
+                     'connect:test',
+                     'karma'
   ]);
 
   grunt.registerTask('build', [
-    'clean:dist',
-    'jshint',
-    'test',
-    'coffee',
-    'compass:dist',
-    'useminPrepare',
-    'imagemin',
-    'cssmin',
-    'htmlmin',
-    'concat',
-    'copy',
-    'cdnify',
-    'ngmin',
-    'uglify',
-    'rev',
-    'usemin'
+                     'clean:dist',
+                     'jshint',
+                     'test',
+                     'coffee',
+                     'compass:dist',
+                     'useminPrepare',
+                     'imagemin',
+                     'cssmin',
+                     'htmlmin',
+                     'ngtemplates',
+                     'concat',
+                     'copy',
+                     'cdnify',
+                     'ngmin',
+                     'uglify',
+                     'rev',
+                     'usemin'
   ]);
 
   grunt.registerTask('default', ['build']);
+
 };

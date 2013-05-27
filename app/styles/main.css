@@ -38,6 +38,7 @@ textarea {
 }
 
 h1 {
+  font-weight: normal;
   color: #b58900;
   margin: 0 0 20px;
 }

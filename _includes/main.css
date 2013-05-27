@@ -1,0 +1,10 @@
+body {
+  font: 16px/20px "Helvetica Neue", Helvetica, sans-serif;
+  color: #93a1a1;
+  background: #fdf6e3;
+}
+
+.logo {
+  width: 72px;
+  height: 72px;
+}

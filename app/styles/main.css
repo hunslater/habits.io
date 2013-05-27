@@ -350,8 +350,8 @@ nav .btn:first-child,
 
 canvas {
   margin: 20px 20px 0;
-  width: 280px;
-  height: 280px;
+  width: 280px !important;
+  height: 280px !important;
 }
 
 .btn-clear-data {

@@ -32,6 +32,11 @@ select {
   font: 16px/20px "Roboto-Medium", "Helvetica Neue", Helvetica, sans-serif;
 }
 
+input[type=text],
+textarea {
+  -webkit-user-select: text;
+}
+
 h1 {
   color: #b58900;
   margin: 0 0 20px;

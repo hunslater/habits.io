@@ -12,4 +12,8 @@ angular.module('habitsApp')
       $location.path('/habit');
     };
 
+    $scope.openVid = function () {
+      window.open('http://www.youtube.com/watch?v=6bCC2-X8ZuM', '_blank');
+    };
+
   }]);
